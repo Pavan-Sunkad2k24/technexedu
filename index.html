@@ -383,7 +383,241 @@ body {
     color: white;
 }
 
+/* ================================
+   FOUNDER / TEAM PROFILE POPUP
+   ================================ */
 
+.profile-popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.78);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 99999;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.profile-popup-box {
+    position: relative;
+
+    width: 900px;
+    max-width: 95%;
+    min-height: 430px;
+
+    background: linear-gradient(
+        135deg,
+        #0a1020,
+        #111a35,
+        #15112d
+    );
+
+    border: 1px solid rgba(0, 234, 255, 0.25);
+    border-radius: 28px;
+
+    box-shadow:
+        0 0 40px rgba(0, 234, 255, 0.12),
+        0 20px 70px rgba(0, 0, 0, 0.5);
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: stretch;
+}
+
+/* LEFT IMAGE AREA */
+
+.profile-popup-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+
+    width: 47%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(
+        145deg,
+        #071522,
+        #0b2635
+    );
+
+    /*
+       This creates the curved separation
+       shown in your drawing.
+    */
+    border-radius: 0 55% 55% 0;
+
+    overflow: hidden;
+}
+
+.profile-popup-image::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -2px;
+    width: 5px;
+    height: 100%;
+
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        #00eaff,
+        #7c3aed,
+        transparent
+    );
+
+    opacity: 0.6;
+}
+
+.profile-popup-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 0 55% 55% 0;
+}
+
+/* RIGHT INFORMATION AREA */
+
+.profile-popup-content {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 55px 55px 45px 47%;
+
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.profile-popup-content h2 {
+    margin: 0 0 8px;
+
+    font-size: 30px;
+    font-weight: 600;
+
+    background: linear-gradient(
+        90deg,
+        #00eaff,
+        #ffffff,
+        #a78bfa
+    );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.profile-popup-content .popup-role {
+    margin: 0 0 25px;
+
+    color: #00eaff;
+
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.profile-popup-content .popup-description {
+    margin: 0;
+
+    color: #cbd5e1;
+
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* CLOSE BUTTON */
+
+.profile-popup-close {
+    position: absolute;
+
+    top: 18px;
+    right: 22px;
+
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255,255,255,0.2);
+
+    background: rgba(255,255,255,0.08);
+
+    color: white;
+
+    font-size: 25px;
+    line-height: 34px;
+
+    cursor: pointer;
+
+    z-index: 10;
+
+    transition: 0.3s;
+}
+
+.profile-popup-close:hover {
+    background: #00eaff;
+    color: #020617;
+
+    transform: rotate(90deg);
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .profile-popup-box {
+        width: 95%;
+        min-height: auto;
+
+        flex-direction: column;
+
+        border-radius: 22px;
+    }
+
+    .profile-popup-image {
+        position: relative;
+
+        width: 100%;
+        height: 260px;
+
+        border-radius: 0 0 50% 50%;
+
+        flex-shrink: 0;
+    }
+
+    .profile-popup-image img {
+        border-radius: 0 0 50% 50%;
+    }
+
+    .profile-popup-content {
+        padding: 30px 25px 35px;
+        text-align: center;
+    }
+
+    .profile-popup-content h2 {
+        font-size: 25px;
+    }
+
+    .profile-popup-content .popup-description {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+}
     </style>
 
 </head>
@@ -397,7 +631,7 @@ body {
     <!-- LEFT SIDE LOGO -->
     <div class="nav-left">
 
-        <img src="logo.png" alt="Technex Logo"
+        <img src="./images/logo.png" alt="Technex Logo"
         style="height:65px;">
 
         <div>
@@ -500,6 +734,103 @@ Our mission is to bridge the gap between traditional education and modern innova
 </div>
 <div class="section-divider"></div>
 
+<!-- Our School Partners -->
+<div id="schools" class="scroll-hidden" style="
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #ffffff;
+    color: #0a2540;
+">
+
+    <h2 style="
+        font-size: 32px;
+        color: #0a2540;
+        margin-bottom: 15px;
+    ">
+        Our School Partners
+    </h2>
+
+    <p style="
+        max-width: 700px;
+        margin: 0 auto 40px;
+        font-size: 17px;
+        line-height: 1.7;
+        color: #475569;
+    ">
+        We collaborate with schools to provide quality Robotics and STEM
+        education through structured curriculum, trained trainers,
+        hands-on projects, and practical learning experiences.
+    </p>
+
+    <!-- School Card -->
+    <div style="
+        max-width: 320px;
+        margin: auto;
+        background: white;
+        border-radius: 20px;
+        padding: 25px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        transition: 0.3s;
+        cursor: pointer;
+    "
+    onmouseover="this.style.transform='translateY(-8px)'"
+    onmouseout="this.style.transform='translateY(0)'"
+    onclick="window.location.href='nightingales.html'">
+
+        <!-- Nightingales School Logo -->
+<div style="
+    width: 130px;
+    height: 130px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: #f1f5f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+">
+    <img src="images/nightlogo.jpeg"
+         alt="Nightingales English School Logo"
+         style="
+             width: 100%;
+             height: 100%;
+             object-fit: contain;
+         ">
+</div>
+
+        <h3 style="
+            font-size: 21px;
+            margin: 10px 0;
+            color: #0a2540;
+        ">
+            Nightingales English School
+        </h3>
+
+        <p style="
+            font-size: 14px;
+            color: #64748b;
+            margin-bottom: 20px;
+        ">
+            Robotics & STEM Education Partner
+        </p>
+
+        <span style="
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 25px;
+            background: #0a2540;
+            color: white;
+            font-size: 14px;
+        ">
+            View Our Work →
+        </span>
+
+    </div>
+
+</div>
+
+<div class="section-divider"></div>
+
 <!-- Why Choose Us -->
 <div style="background-color: #ffffff; padding: 80px 20px; text-align: center;color: #0a2540;">
     <h2 style="font-size: 32px; color: #0a2540;">Why Choose Us</h2>
@@ -515,19 +846,37 @@ Our mission is to bridge the gap between traditional education and modern innova
 </div>
 
 <!-- Popup Modal -->
-<div id="popup" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.7); justify-content:center; align-items:center; z-index:9999;color: #0a2540;">
+<!-- Founder / Team Profile Popup -->
 
-    <div style="background:white; padding:30px; border-radius:10px; width:90%; max-width:400px; text-align:center; position:relative;color: #0a2540;">
-        
-        <span onclick="closePopup()" style="position:absolute; top:10px; right:15px; cursor:pointer; font-size:20px;">&times;</span>
-        
-        <img id="popup-img" src="" style="width:120px; height:120px; border-radius:50%; object-fit:cover; margin-bottom:10px;">
-        
-        <h3 id="popup-name"></h3>
-        <p id="popup-role" style="font-weight:bold;"></p>
-        <p id="popup-desc"></p>
+<div id="popup" class="profile-popup">
+
+    <div class="profile-popup-box">
+
+        <!-- Close Button -->
+        <button class="profile-popup-close" onclick="closePopup()">
+            &times;
+        </button>
+
+        <!-- Profile Image -->
+        <div class="profile-popup-image">
+
+            <img id="popup-img" src="" alt="Profile Image">
+
+        </div>
+
+        <!-- Profile Information -->
+        <div class="profile-popup-content">
+
+            <h2 id="popup-name"></h2>
+
+            <p id="popup-role" class="popup-role"></p>
+
+            <p id="popup-desc" class="popup-description"></p>
+
+        </div>
 
     </div>
+
 </div>
 <div class="section-divider"></div>
 
@@ -541,10 +890,10 @@ Our mission is to bridge the gap between traditional education and modern innova
 'Mr.Pavan A Sunkad',
 'Co-Founder & Director',
 'Pavan leads Technex with a vision to bring robotics and STEM education to every school. He has strong expertise in training and program execution.',
-'PavanP.jpg'
+'images/PavanP.jpg'
 )">
 
-    <img src="PavanP.jpg" style="width:100%; height:220px; object-fit:cover; border-radius:30px; margin-bottom:10px;">
+    <img src="images/PavanP.jpg" style="width:100%; height:220px; object-fit:cover; border-radius:30px; margin-bottom:10px;">
 
     <h3>Mr.Pavan A Sunkad</h3>
     <p>Co-Founder & Director</p>
@@ -555,10 +904,10 @@ Our mission is to bridge the gap between traditional education and modern innova
 'Mr.Shakir Ellath',
 'Co-Founder & Director',
 'Shakir plays a key role in business development and school partnerships, ensuring smooth collaboration and growth.',
-'shakirP.jpg'
+'images/shakirP.jpg'
 )">
 
-    <img src="shakirP.jpg" style="width:100%; height:220px; object-fit:cover; border-radius:10px; margin-bottom:10px;">
+    <img src="images/shakirP.jpg" style="width:100%; height:220px; object-fit:cover; border-radius:10px; margin-bottom:10px;">
 
     <h3>Mr.Shakir Ellath</h3>
     <p>Co-Founder & Director</p>
@@ -591,10 +940,10 @@ Our mission is to bridge the gap between traditional education and modern innova
         'Ms.Sandhya Rao',
         'Academic Director',
         'With over 15 years of experience in the education sector, including 10 years with renowned institutions such as DPS Bangalore North, DPS Dubai, BGS, and NPS, Ms. Sandhya Rao brings exceptional expertise in academic leadership and school administration. Committed to excellence in curriculum, teaching quality, and student development, she fosters an innovative and enriching learning environment focused on student success and holistic growth.',
-        'SandhyaAS.jpeg'
+        'images/SandhyaAS.jpeg'
         )">
 
-            <img src="SandhyaAS.jpeg"
+            <img src="images/SandhyaAS.jpeg"
             style="
             width:250px;
             height:250px;
@@ -604,6 +953,25 @@ Our mission is to bridge the gap between traditional education and modern innova
             <h3>Ms.Sandhya Rao</h3>
 
             <p>Academic Director</p>
+
+        </div>
+        <div class="card" onclick="openPopup(
+        'Mr.Manideep',
+        'Robotics And STEM Trainer',
+        'Passionate Robotics & STEM Trainer with strong subject expertise and a student-friendly approach to teaching.',
+        'images/Manideep-pic.jpeg'
+        )">
+
+            <img src="images/Manideep-pic.jpeg"
+            style="
+            width:250px;
+            height:250px;
+            object-fit:cover;
+            border-radius:20px;">
+
+            <h3>Mr.Manideep</h3>
+
+            <p>Robotics And STEM Trainer</p>
 
         </div>
 

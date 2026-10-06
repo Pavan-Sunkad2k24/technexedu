@@ -1,0 +1,1655 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nightingales English School | Technex Robotics And STEM EDU</title>
+
+    <meta name="description"
+        content="Technex Robotics And STEM EDU provides structured Robotics and STEM education, project-based learning, assessments and dedicated trainer support at Nightingales English School.">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+    <style>
+
+        /* ================= ROOT ================= */
+
+        :root {
+            --primary: #00eaff;
+            --secondary: #7c3aed;
+            --dark: #020617;
+            --dark2: #0f172a;
+            --text: #334155;
+            --light: #f8fafc;
+        }
+
+
+        /* ================= GLOBAL ================= */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: radial-gradient(circle at top left, #0f172a, #020617);
+            color: white;
+        }
+
+
+        /* ================= NAVBAR ================= */
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 14px 40px;
+
+            background: rgba(10, 15, 28, 0.82);
+            backdrop-filter: blur(12px);
+
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+
+            z-index: 9999;
+        }
+
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .nav-left img {
+            height: 60px;
+            width: auto;
+        }
+
+        .nav-left h2 {
+            margin: 0;
+            color: white;
+            font-size: 26px;
+        }
+
+        .nav-left p {
+            margin: 0;
+            color: #cbd5e1;
+            font-size: 11px;
+            letter-spacing: 2px;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .nav-right a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .nav-right a:hover {
+            color: var(--primary);
+        }
+
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 75vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            padding: 150px 20px 80px;
+
+            background:
+                radial-gradient(
+                    circle at 20% 20%,
+                    rgba(0,234,255,0.15),
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 80% 70%,
+                    rgba(124,58,237,0.18),
+                    transparent 30%
+                );
+        }
+
+        .hero-content {
+            max-width: 900px;
+        }
+
+        
+.school-icon {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 30px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 234, 255, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: transparent;
+    box-shadow: 0 0 25px rgba(0, 234, 255, 0.12);
+}
+
+.school-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+        .hero h1 {
+            font-size: 46px;
+            margin: 10px 0;
+
+            background: linear-gradient(
+                90deg,
+                #00eaff,
+                #ffffff,
+                #a78bfa
+            );
+            background-clip: text;
+            -webkit-background-clip: text;
+
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero h2 {
+            font-size: 20px;
+            font-weight: 400;
+            color: #cbd5e1;
+        }
+
+        .hero p {
+            max-width: 750px;
+            margin: 25px auto;
+
+            line-height: 1.8;
+
+            color: #cbd5e1;
+        }
+
+        .hero-button {
+            display: inline-block;
+
+            margin-top: 15px;
+
+            padding: 12px 25px;
+
+            border-radius: 30px;
+
+            background: linear-gradient(
+                90deg,
+                var(--primary),
+                #38bdf8
+            );
+
+            color: #020617;
+
+            text-decoration: none;
+
+            font-weight: 600;
+
+            transition: 0.3s;
+        }
+
+        .hero-button:hover {
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 10px 30px rgba(0,234,255,0.25);
+        }
+
+
+        /* ================= COMMON ================= */
+
+        .section {
+            padding: 80px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+
+            font-size: 34px;
+
+            margin-bottom: 15px;
+
+            color: #0a2540;
+        }
+
+        .section-subtitle {
+            text-align: center;
+
+            max-width: 750px;
+
+            margin: 0 auto 50px;
+
+            color: #64748b;
+
+            line-height: 1.8;
+        }
+
+
+        /* ================= PROGRAM OVERVIEW ================= */
+
+        .overview {
+            background: white;
+            color: var(--text);
+        }
+
+        .overview-grid {
+            max-width: 1100px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(230px, 1fr));
+
+            gap: 25px;
+        }
+
+        .overview-card {
+            padding: 30px;
+
+            background: white;
+
+            border-radius: 18px;
+
+            text-align: center;
+
+            box-shadow:
+                0 8px 25px rgba(0,0,0,0.08);
+
+            transition: 0.3s;
+        }
+
+        .overview-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .overview-card i {
+            font-size: 35px;
+
+            color: #7c3aed;
+
+            margin-bottom: 15px;
+        }
+
+        .overview-card h3 {
+            color: #0a2540;
+
+            margin: 10px 0;
+        }
+
+        .overview-card p {
+            color: #64748b;
+
+            font-size: 14px;
+
+            line-height: 1.7;
+        }
+
+
+        /* ================= SERVICES ================= */
+
+        .services-section {
+            background: #f8fafc;
+
+            color: #334155;
+        }
+
+        .services-grid {
+            max-width: 1100px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(280px, 1fr));
+
+            gap: 25px;
+        }
+
+        .service-card {
+            background: white;
+
+            padding: 30px;
+
+            border-radius: 20px;
+
+            border: 1px solid #e2e8f0;
+
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 15px 35px rgba(15,23,42,0.1);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 15px;
+
+            background: #eef2ff;
+
+            color: #7c3aed;
+
+            font-size: 25px;
+
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            color: #0a2540;
+
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: #64748b;
+
+            line-height: 1.7;
+
+            font-size: 14px;
+        }
+
+
+        /* ================= TRAINER ================= */
+
+        .trainer-section {
+            background:
+                linear-gradient(
+                    135deg,
+                    #0f172a,
+                    #020617
+                );
+
+            padding: 90px 20px;
+        }
+
+        .trainer-container {
+            max-width: 1000px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 50px;
+
+            align-items: center;
+        }
+
+        .trainer-text h2 {
+            font-size: 34px;
+
+            margin-bottom: 20px;
+        }
+
+        .trainer-text p {
+            color: #cbd5e1;
+
+            line-height: 1.8;
+        }
+
+        .trainer-card {
+            padding: 35px;
+
+            border-radius: 22px;
+
+            background: rgba(255,255,255,0.06);
+
+            border: 1px solid rgba(255,255,255,0.1);
+
+            backdrop-filter: blur(10px);
+        }
+
+        .trainer-card i {
+            font-size: 40px;
+
+            color: var(--primary);
+
+            margin-bottom: 15px;
+        }
+
+        .trainer-card h3 {
+            margin: 10px 0;
+
+            font-size: 25px;
+        }
+
+        .trainer-card p {
+            color: #cbd5e1;
+        }
+
+
+        /* ================= ASSESSMENT ================= */
+
+        .assessment {
+            background: white;
+
+            color: #334155;
+        }
+
+        .assessment-grid {
+            max-width: 1000px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(220px, 1fr));
+
+            gap: 20px;
+        }
+
+        .exam-card {
+            padding: 25px;
+
+            border-radius: 18px;
+
+            background: #f8fafc;
+
+            border-left: 5px solid #7c3aed;
+        }
+
+        .exam-card h3 {
+            margin: 0 0 10px;
+
+            color: #0a2540;
+        }
+
+        .exam-card p {
+            margin: 0;
+
+            color: #64748b;
+
+            font-size: 14px;
+
+            line-height: 1.6;
+        }
+
+
+        /* ================= PHOTO GALLERY ================= */
+
+.gallery-section {
+    padding: 80px 40px;
+    background: #f8fafc;
+}
+
+.gallery-grid {
+    max-width: 1200px;
+    margin: 40px auto 0;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+/* Individual gallery card */
+.gallery-item {
+    background: #ffffff;
+    border-radius: 18px;
+    overflow: hidden;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+
+    min-width: 0;
+}
+
+/* Hover effect */
+.gallery-item:hover {
+    transform: translateY(-6px);
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.16);
+}
+
+/* Fixed photo area */
+.gallery-image {
+    width: 100%;
+    height: 230px;
+
+    overflow: hidden;
+
+    background: #e2e8f0;
+}
+
+/* Actual photos */
+.gallery-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition: transform 0.4s ease;
+}
+
+/* Zoom slightly on hover */
+.gallery-item:hover .gallery-image img {
+    transform: scale(1.05);
+}
+
+/* Placeholder icon */
+.gallery-placeholder {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(
+        135deg,
+        #e2e8f0,
+        #f8fafc
+    );
+
+    color: #64748b;
+}
+
+.gallery-placeholder i {
+    font-size: 45px;
+}
+
+/* Caption area */
+.gallery-caption {
+    padding: 18px 20px;
+}
+
+.gallery-caption h3 {
+    margin: 0 0 6px;
+
+    font-size: 18px;
+    color: #0a2540;
+}
+
+.gallery-caption p {
+    margin: 0;
+
+    font-size: 14px;
+    line-height: 1.5;
+    color: #64748b;
+}
+
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 900px) {
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .gallery-image {
+        height: 220px;
+    }
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+
+    .gallery-section {
+        padding: 60px 20px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .gallery-image {
+        height: 230px;
+    }
+}
+
+
+        /* ================= REPORTING ================= */
+
+        .reporting {
+            padding: 90px 20px;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    #172554,
+                    #020617
+                );
+
+            text-align: center;
+        }
+
+        .reporting-content {
+            max-width: 800px;
+
+            margin: auto;
+        }
+
+        .reporting h2 {
+            font-size: 34px;
+        }
+
+        .reporting p {
+            color: #cbd5e1;
+
+            line-height: 1.8;
+        }
+
+        .report-items {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            justify-content: center;
+
+            gap: 15px;
+
+            margin-top: 30px;
+        }
+
+        .report-item {
+            padding: 12px 20px;
+
+            border-radius: 25px;
+
+            background: rgba(255,255,255,0.08);
+
+            border: 1px solid rgba(0,234,255,0.2);
+
+            color: #e2e8f0;
+        }
+
+
+        /* ================= EXHIBITION ================= */
+
+        .exhibition {
+            background: white;
+
+            text-align: center;
+
+            color: #334155;
+        }
+
+        .exhibition-box {
+            max-width: 850px;
+
+            margin: auto;
+
+            padding: 45px;
+
+            border-radius: 25px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #eef2ff,
+                    #f8fafc
+                );
+
+            border: 1px solid #e2e8f0;
+        }
+
+        .exhibition-box i {
+            font-size: 50px;
+
+            color: #7c3aed;
+
+            margin-bottom: 15px;
+        }
+
+        .exhibition-box h2 {
+            color: #0a2540;
+        }
+
+        .exhibition-box p {
+            color: #64748b;
+
+            line-height: 1.8;
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            padding: 35px 20px;
+
+            text-align: center;
+
+            background: #020617;
+
+            color: #94a3b8;
+
+            font-size: 14px;
+        }
+
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 900px) {
+
+            .gallery-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 800px) {
+
+            .navbar {
+                padding: 12px 18px;
+            }
+
+            .nav-left h2 {
+                font-size: 20px;
+            }
+
+            .nav-left p {
+                font-size: 9px;
+            }
+
+            .nav-left img {
+                height: 48px;
+            }
+
+            .nav-right {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .trainer-container {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding-top: 130px;
+            }
+
+        }
+
+
+        @media (max-width: 550px) {
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section {
+                padding: 60px 15px;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<div class="navbar">
+
+    <div class="nav-left">
+
+        <a href="index.html">
+
+            <img src="images/logo.png" alt="Technex Logo">
+
+        </a>
+
+        <div>
+
+            <h2>TECHNEX</h2>
+
+            <p>ROBOTICS AND STEM EDU</p>
+
+        </div>
+
+    </div>
+
+
+    <div class="nav-right">
+
+        <a href="index.html">HOME</a>
+
+        <a href="index.html#services">SERVICES</a>
+
+        <a href="index.html#Founders">FOUNDERS</a>
+
+        <a href="index.html#contact">CONTACT</a>
+
+    </div>
+
+</div>
+
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="school-icon">
+
+            <img src="images/nightlogo.jpeg" alt="Nightingales English School Logo">
+
+        </div>
+
+
+        <h1>Nightingales English School</h1>
+
+        <h2>Robotics & STEM Education Program</h2>
+
+        <p>
+
+            Technex Robotics And STEM EDU provides structured and
+            grade-wise Robotics and STEM education at Nightingales
+            English School, combining curriculum-based learning,
+            hands-on model building, practical examinations and
+            continuous academic support.
+
+        </p>
+
+
+        <a href="#program" class="hero-button">
+
+            Explore Our Program
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= PROGRAM OVERVIEW ================= -->
+
+<section class="section overview" id="program">
+
+    <h2 class="section-title">
+
+        Program Overview
+
+    </h2>
+
+    <p class="section-subtitle">
+
+        A structured Robotics and STEM learning program designed
+        according to the academic requirements and learning levels
+        of students.
+
+    </p>
+
+
+    <div class="overview-grid">
+
+
+        <div class="overview-card">
+
+            <i class="fas fa-users"></i>
+
+            <h3>Grades 1 – 9</h3>
+
+            <p>
+                Robotics and STEM classes are conducted for
+                students from Grade 1 to Grade 9.
+            </p>
+
+        </div>
+
+
+        <div class="overview-card">
+
+            <i class="fas fa-book-open"></i>
+
+            <h3>Structured Curriculum</h3>
+
+            <p>
+                A well-structured and grade-wise customized
+                curriculum is provided for different learning levels.
+            </p>
+
+        </div>
+
+
+        <div class="overview-card">
+
+            <i class="fas fa-tools"></i>
+
+            <h3>Hands-on Learning</h3>
+
+            <p>
+                Students learn through in-hand model building
+                and project-based activities.
+            </p>
+
+        </div>
+
+
+        <div class="overview-card">
+
+            <i class="fas fa-user-check"></i>
+
+            <h3>Individual Attention</h3>
+
+            <p>
+                Students receive one-to-one attention and guidance
+                during the learning process.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= SERVICES ================= -->
+
+<section class="section services-section">
+
+    <h2 class="section-title">
+
+        Services Provided by Technex
+
+    </h2>
+
+    <p class="section-subtitle">
+
+        Technex supports the school with a complete Robotics and
+        STEM learning program, from classroom instruction to
+        practical learning and assessment.
+
+    </p>
+
+
+    <div class="services-grid">
+
+
+        <div class="service-card">
+
+            <div class="service-icon">
+
+                <i class="fas fa-robot"></i>
+
+            </div>
+
+            <h3>Robotics & STEM Classes</h3>
+
+            <p>
+                Regular Robotics and STEM classes are conducted
+                for Grade 1 to Grade 9 students as part of the
+                school's learning program.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-icon">
+
+                <i class="fas fa-book"></i>
+
+            </div>
+
+            <h3>Grade-wise Curriculum</h3>
+
+            <p>
+                Technex provides a structured and customized
+                curriculum designed according to the grade and
+                learning level of students.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-icon">
+
+                <i class="fas fa-cubes"></i>
+
+            </div>
+
+            <h3>Model & Project Building</h3>
+
+            <p>
+                Every grade is supported with hands-on model
+                building and project-based learning to connect
+                concepts with practical applications.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-icon">
+
+                <i class="fas fa-file-lines"></i>
+
+            </div>
+
+            <h3>Student Notes</h3>
+
+            <p>
+                Proper notes are provided to students to support
+                classroom learning, revision and understanding
+                of Robotics and STEM concepts.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-icon">
+
+                <i class="fas fa-user-graduate"></i>
+
+            </div>
+
+            <h3>Individual Attention</h3>
+
+            <p>
+                Students receive individual guidance and attention
+                during learning and practical model-building
+                activities.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-icon">
+
+                <i class="fas fa-chart-line"></i>
+
+            </div>
+
+            <h3>Academic Assessment</h3>
+
+            <p>
+                Theory and practical examinations are conducted
+                separately according to the school's academic
+                assessment process.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= TRAINER ================= -->
+
+<section class="trainer-section">
+
+    <div class="trainer-container">
+
+
+        <div class="trainer-text">
+
+            <h2>
+
+                Dedicated Trainer Support
+
+            </h2>
+
+            <p>
+
+                Technex has assigned a dedicated trainer,
+                <strong>Mr. Manideep</strong>, to support the
+                Robotics and STEM program at Nightingales English
+                School.
+
+            </p>
+
+            <p>
+
+                A backup trainer is also available to ensure
+                continuity of the program during the absence of
+                the dedicated trainer.
+
+            </p>
+
+            <p>
+
+                The program is conducted three days a week,
+                covering the scheduled school-day requirements.
+
+            </p>
+
+        </div>
+
+
+        <div class="trainer-card">
+
+            <i class="fas fa-chalkboard-user"></i>
+
+            <h3>Dedicated Academic Support</h3>
+
+            <p>
+
+                Regular classroom support, practical guidance,
+                student attention and continuity are maintained
+                through dedicated trainer deployment.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= EXAMS ================= -->
+
+<section class="section assessment">
+
+    <h2 class="section-title">
+
+        Academic Assessments
+
+    </h2>
+
+    <p class="section-subtitle">
+
+        Assessments are conducted according to the school's
+        academic process, with separate theory and practical
+        examinations.
+
+    </p>
+
+
+    <div class="assessment-grid">
+
+
+        <div class="exam-card">
+
+            <h3>Round 1 Examination</h3>
+
+            <p>
+                Round 1 assessment has been completed as part
+                of the academic evaluation process.
+            </p>
+
+        </div>
+
+
+        <div class="exam-card">
+
+            <h3>Mid-Term Examination</h3>
+
+            <p>
+                The Mid-Term examination has also been completed.
+            </p>
+
+        </div>
+
+
+        <div class="exam-card">
+
+            <h3>Round 2 Examination</h3>
+
+            <p>
+                Round 2 examination is scheduled to be conducted
+                in the upcoming months.
+            </p>
+
+        </div>
+
+
+        <div class="exam-card">
+
+            <h3>Final Examination</h3>
+
+            <p>
+                The Final examination will be conducted during
+                the upcoming academic period.
+            </p>
+
+        </div>
+
+
+        <div class="exam-card">
+
+            <h3>Practical Examination</h3>
+
+            <p>
+                Practical examinations are conducted separately
+                to evaluate students' practical understanding
+                and application.
+            </p>
+
+        </div>
+
+
+        <div class="exam-card">
+
+            <h3>Theory Examination</h3>
+
+            <p>
+                Theory examinations are conducted separately
+                to assess students' conceptual understanding.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= PHOTO GALLERY ================= -->
+
+<!-- ================================
+     PHOTO GALLERY
+================================ -->
+
+<section class="section gallery-section" id="gallery">
+
+    <h2 class="section-title">
+        Photo Gallery
+    </h2>
+
+    <p class="section-subtitle">
+        A glimpse of Robotics and STEM learning activities,
+        hands-on projects, model building and academic activities
+        conducted at Nightingales English School.
+    </p>
+
+
+    <div class="gallery-grid">
+
+
+        <!-- Gallery Card 1 -->
+        <div class="gallery-item">
+
+            <div class="gallery-image">
+
+                <div class="gallery-placeholder">
+                    <img src="images/roboimgCS.jpeg" alt="Robotics Activity at Nightingales English School">
+                </div>
+
+            </div>
+
+            <div class="gallery-caption">
+                <h3>Classroom Sessions</h3>
+                <p>Robotics & STEM learning activities</p>
+            </div>
+
+        </div>
+
+
+        <!-- Gallery Card 2 -->
+        <div class="gallery-item">
+
+            <div class="gallery-image">
+
+                <div class="gallery-placeholder">
+                    <img src="images/roboimgMB.jpeg" alt="Robotics Activity at Nightingales English School">
+                </div>
+
+            </div>
+
+            <div class="gallery-caption">
+                <h3>Model Building</h3>
+                <p>Hands-on model building activities</p>
+            </div>
+
+        </div>
+
+
+        <!-- Gallery Card 3 -->
+        <div class="gallery-item">
+
+            <div class="gallery-image">
+
+                <div class="gallery-placeholder">
+                    <img src="images/roboimg002.jpg" alt="Robotics Activity at Nightingales English School">
+                </div>
+
+            </div>
+
+            <div class="gallery-caption">
+                <h3>Robotics Activities</h3>
+                <p>Hands-on Robotics learning</p>
+            </div>
+
+        </div>
+
+
+        <!-- Gallery Card 4 -->
+        <div class="gallery-item">
+
+            <div class="gallery-image">
+
+                <div class="gallery-placeholder">
+                    <img src="images/roboimg003.avif" alt="Robotics Activity at Nightingales English School">
+                </div>
+
+            </div>
+
+            <div class="gallery-caption">
+                <h3>STEM Activities</h3>
+                <p>Creative STEM-based learning</p>
+            </div>
+
+        </div>
+
+
+        <!-- Gallery Card 5 -->
+        <div class="gallery-item">
+
+            <div class="gallery-image">
+
+                <div class="gallery-placeholder">
+                    <img src="images/imgrobo004.jpg" alt="Robotics Activity at Nightingales English School">
+                </div>
+
+            </div>
+
+            <div class="gallery-caption">
+                <h3>Student Projects</h3>
+                <p>Student-built Robotics projects</p>
+            </div>
+
+        </div>
+
+
+        <!-- Gallery Card 6 -->
+        <div class="gallery-item">
+
+            <div class="gallery-image">
+
+                <div class="gallery-placeholder">
+                    <img src="images/roboimg005.avif" alt="Robotics Activity at Nightingales English School">
+                </div>
+
+            </div>
+
+            <div class="gallery-caption">
+                <h3>Practical Learning</h3>
+                <p>Learning through practical activities</p>
+            </div>
+
+        </div>
+
+
+        <!-- Gallery Card 7 -->
+        <div class="gallery-item">
+
+            <div class="gallery-image">
+
+                <div class="gallery-placeholder">
+                    <img src="images/roboimg006.jpeg" alt="Robotics Activity at Nightingales English School">
+                </div>
+
+            </div>
+
+            <div class="gallery-caption">
+                <h3>Student Activities</h3>
+                <p>Students participating in activities</p>
+            </div>
+
+        </div>
+
+
+        <!-- Gallery Card 8 -->
+        <div class="gallery-item">
+
+            <div class="gallery-image">
+
+                <div class="gallery-placeholder">
+                    <img src="images/roboimgCE.jpeg" alt="Robotics Activity at Nightingales English School">
+                </div>
+
+            </div>
+
+            <div class="gallery-caption">
+                <h3>School Events</h3>
+                <p>Robotics and STEM events</p>
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+<!-- ================= REPORTING ================= -->
+
+<section class="reporting">
+
+    <div class="reporting-content">
+
+        <h2>
+
+            Continuous Progress Monitoring
+
+        </h2>
+
+        <p>
+
+            Technex maintains monthly reports to monitor and
+            document the progress of the Robotics and STEM
+            education program at the school.
+
+        </p>
+
+
+        <div class="report-items">
+
+            <div class="report-item">
+
+                <i class="fas fa-calendar-check"></i>
+
+                Monthly Reports
+
+            </div>
+
+
+            <div class="report-item">
+
+                <i class="fas fa-chart-line"></i>
+
+                Program Progress
+
+            </div>
+
+
+            <div class="report-item">
+
+                <i class="fas fa-school"></i>
+
+                School Coordination
+
+            </div>
+
+
+            <div class="report-item">
+
+                <i class="fas fa-user-graduate"></i>
+
+                Student Learning
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= EXHIBITION ================= -->
+
+<section class="section exhibition">
+
+    <div class="exhibition-box">
+
+        <i class="fas fa-lightbulb"></i>
+
+        <h2>
+
+            Robotics Exhibition
+
+        </h2>
+
+        <p>
+
+            As part of the academic year's Robotics and STEM
+            learning journey, Technex will conduct a Robotics
+            Exhibition at the end of the academic year.
+
+            The exhibition will provide students with an
+            opportunity to showcase their learning, models and
+            projects.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= COLLABORATION ================= -->
+
+<section class="section overview">
+
+    <h2 class="section-title">
+
+        Technex × Nightingales English School
+
+    </h2>
+
+    <p class="section-subtitle">
+
+        Through this collaboration, Technex provides structured
+        Robotics and STEM education with curriculum planning,
+        practical learning, dedicated trainer support,
+        assessments and continuous progress monitoring.
+
+    </p>
+
+
+    <div style="text-align:center;">
+
+        <a href="index.html"
+           class="hero-button"
+           style="background:#0a2540;color:white;">
+
+            ← Back to Technex Website
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    © 2026 Technex Robotics And STEM EDU
+
+    <br><br>
+
+    Robotics & STEM Education for Future-Ready Learning
+
+</footer>
+
+
+
+
+</script>
+
+
+</body>
+
+</html>
